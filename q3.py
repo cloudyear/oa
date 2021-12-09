@@ -1,6 +1,7 @@
 import sys
 from collections import defaultdict
 import math
+from scipy.special import comb
 
 N = int(sys.stdin.readline())
 p = sys.stdin.readline().strip().split()
@@ -84,7 +85,7 @@ for i in range(len(p)):
     # print(over3_dict)
 
     for k in over3_dict:
-        total_count += math.comb(over3_dict[k], 3)
+        total_count += math.comb(over3_dict[k], 3) #comb...
 
 print(total_count)
 #
